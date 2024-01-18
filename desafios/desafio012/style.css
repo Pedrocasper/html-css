@@ -1,0 +1,111 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Passion+One:wght@400;700;900&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Passion+One:wght@400;700;900&family=Sriracha&family=Teko:wght@300;400;500;600;700&display=swap');
+
+
+/* definições gerais, como zerando margem e entre borda e criando a variável dos tipos de fontes a ser utilizadas */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+:root {
+    --font-default: Arial, Verdana, Helvetica, sans-serif;
+    --font-secundaria: 'Passion One', sans-serif;
+    --font-principal: 'sriracha', sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+/* agregando a fonte ser utilizada e definindo suas dimensões */ 
+header > h1 {
+    font: 8em var(--font-secundaria);
+    margin: auto;
+    padding: 15px 15px 0px 15px;
+    text-align: center;   
+}
+
+/* definição de tipo, tamanho e dimensões de texto do header */
+header > p, a {
+    font: 1em var(--font-default);
+    margin: auto;
+    padding: 0px 0px 15px 0px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* efeito hover(underline) para os links */
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* com este treixo começo a definir a dimensão principal, fonte e seu tamanho */
+main div {
+    padding: 10vh;
+    font: 2.5vw var(--font-principal);
+}
+
+/* definição do espaçamento entre linhas e espaçamento entre os parágrafos */
+div p {
+    line-height: 2em;
+    padding: 0 0 2em;
+}
+
+
+/* definição entre os parágrafos
+   1º definição somente da cor de letra e fundo branco
+   2º leva e definição da cor de letra, criando um fundo meio transparente, com definção de width e o padding para dar afastamento da boda */ 
+div.semImagem p {
+    color: black;
+    background-color: white;
+}
+
+div.comImagem p{
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-shadow: 1px 1px black;
+    width: fit-content;
+    padding: 5px;
+}
+
+#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.5);
+}
+
+#img02 {
+    background-image: url(imagens/background002.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    font: 1em var(--font-default);
+    background-color: black;
+    color: white;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    position: fixed;
+    width: 100%;
+}
+
+footer > p, a {
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+}
+
